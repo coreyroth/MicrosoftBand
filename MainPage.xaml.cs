@@ -65,7 +65,7 @@ namespace Sensors
                 {
                     // normally wouldn't do it this way obviously
                     bandClientCopy = bandClient;
-
+                    
                     tilesRemaining = await bandClient.TileManager.GetRemainingTileCapacityAsync();
 
                     if (tilesRemaining > 0)
@@ -85,7 +85,7 @@ namespace Sensors
                     bandClient.SensorManager.SkinTemperature.ReadingChanged += SkinTemperature_ReadingChanged;
                     await bandClient.SensorManager.SkinTemperature.StartReadingsAsync();
                     await Task.Delay(TimeSpan.FromMinutes(1));
-                    await bandClient.SensorManager.Accelerometer.StopReadingsAsync();
+                    await bandClient.SensorManager.SkinTemperature.StopReadingsAsync();
                 }
 
             }
