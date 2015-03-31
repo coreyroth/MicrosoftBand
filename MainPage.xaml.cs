@@ -35,7 +35,7 @@ namespace Sensors
     public sealed partial class MainPage : Page
     {
 
-        private const string tileId = "{87281FA7-4576-4533-A3E9-8D7BEF7CEEE5}";
+        private const string tileId = "{87281FA7-4576-4533-A3E9-8D7BEF7CEEE4}";
         private IBandClient bandClientCopy;
         private int tilesRemaining;
 
@@ -79,7 +79,7 @@ namespace Sensors
                             TileIcon = await LoadIcon("ms-appx:///Assets/SampleTileIconLarge.png"),
                             SmallIcon = await LoadIcon("ms-appx:///Assets/SampleTileIconSmall.png")
                         };
-                        await bandClient.TileManager.AddTileAsync(myTile);
+                        //await bandClient.TileManager.AddTileAsync(myTile);
                     }
 
                     bandClient.SensorManager.SkinTemperature.ReadingChanged += SkinTemperature_ReadingChanged;
@@ -101,8 +101,8 @@ namespace Sensors
             string text = string.Format("Temperature: {0}C", temperatureReading.Temperature);
             await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => { this.textBlock.Text = text; }).AsTask();
 
-            if (tilesRemaining > 0)
-                await bandClientCopy.NotificationManager.SendMessageAsync(Guid.Parse(tileId), text, "Your temperature reading has been taken.", DateTimeOffset.Now, MessageFlags.ShowDialog);
+            //if (tilesRemaining > 0)
+            //    await bandClientCopy.NotificationManager.SendMessageAsync(Guid.Parse(tileId), text, "Your temperature reading has been taken.", DateTimeOffset.Now, MessageFlags.ShowDialog);
 
         }
 

@@ -11,7 +11,7 @@
     <Grid>
         <Button Content="Run" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" Width="215" Click="Button_Click" FontFamily="Global User Interface"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,81,0,0" TextWrapping="Wrap" Text="Pair a Microsoft Band with the phone and click &quot;Run&quot;." VerticalAlignment="Top" Height="23" Width="380"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="MICROSOFT BAND SDK - SENSORS" VerticalAlignment="Top" Height="23" Width="380" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="MICROSOFT BAND SDK - SKIN TEMPERATURE" VerticalAlignment="Top" Height="23" Width="380" FontSize="16"/>
         <Button Content="Remove Tile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="215" Click="RemoveTileButton_Click" FontFamily="Global User Interface" Margin="10,112,0,0"/>
     </Grid>
 </Page>
